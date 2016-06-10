@@ -1,0 +1,47 @@
+<html>
+<head>
+	<title></title>
+</head>
+<title>Front Page</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="http://code.jquery.com/jquery-2.x-git.js"></script>
+    <style type="text/css">
+    #fDiv{
+    	background-color: skyblue;
+    }
+    #sDiv{
+    	background-color: green;
+    }
+	
+</style>
+ <body>
+ 			<form action="" style="margin-top:40px">
+ 			      <input type="radio" name="color" value="car">I have a Car
+                  <input type="radio" name="color" value="bike">I have a Bike
+            </form>
+            <div id="fDiv" class="red box" style="margin-top:40px">I have a bike</strong></div>
+            <div id="sDiv" class="green box" style="margin-top:40px">I have a car</strong></div>
+            <script type="text/javascript">
+                 $(document.read(function(){
+            	$('input[type="radio"]').click(function(){
+            		if($(this).attr("value")=="car"){
+            			$(".box").not(".red").hide();
+            			$(".red").CSS("border","1px solid red")
+            			$(".red").show();
+            		}
+            		if ($(this).attr("value")=="bike") {
+            			$(".box").not(".green").hide();
+            			$(".green").CSS("border", "1px solid green")
+            			$(".green").show();
+            		}
+            	});
+            </script>
+        
+ </body>
