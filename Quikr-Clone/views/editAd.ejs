@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quikr Clone</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="/public/css/bootstrap.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="/public/css/clean-blog.min.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>   
+<!-- Navigation -->
+<nav class="navbar navbar-default navbar-custom navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header page-scroll">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">Quikr</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="/">Home</a>
+                </li>
+                <li>
+                    <a href="/viewads">View Ads</a>
+                </li>
+                <li>
+                    <a href="/postad">Post Ad</a>
+                </li>
+                <li>
+                    <a href="/about">About</a>
+                </li>
+                <li>
+                    <a href="/contact">Contact</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+    <header class="intro-header" style="background-image: url('../public/img/ballcube-bg.jpg')">
+<div class="container">
+    <h1 style="text-align: center">Edit this Ad</h1>
+    <div class="panel panel-primary">
+        <div class="panel-heading">Post a new Ad</div>
+        <div class="panel-body">
+            <form role="form" method="post" action="/api/editAd/<%=data._id%>" id="contact-form" class="contact-form">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="adTitle">Ad title</label>
+                            <input type="text" class="form-control" name="adTitle" required autocomplete="off" id="adTitle" value="<%=data.adTitle%>" placeholder="Enter Title">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="sName">Seller Name</label>
+                            <input type="text" class="form-control" name="sName" required autocomplete="off" id="sName" value="<%=data.sName%>" placeholder="Enter Seller Name">
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="price">Price</label>
+                            <input type="text" class="form-control" name="price" required autocomplete="off" id="price" value="<%=data.price%>" placeholder="Enter Seller Name">
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="contactNo">Contact No.</label>
+                            <input type="text" class="form-control" name="contactNo" required autocomplete="off" id="contactNo" value="<%=data.contactNo%>" placeholder="Enter Seller Name">
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="emailId">E-Mail</label>
+                            <input type="text" class="form-control" name="emailId" required autocomplete="off" id="emailId" value="<%=data.emailId%>" placeholder="Enter Seller Name">
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="brand">Brand Name</label>
+                            <input type="text" class="form-control" name="brand" required autocomplete="off" id="brand" value="<%=data.brand%>" placeholder="Enter Seller Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="category">Category</label>
+                            <input type="text" class="form-control" name="category" required autocomplete="off" id="category" value="<%=data.category%>" placeholder="Enter Category">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="subCategory">Sub category</label>
+                            <input type="text" class="form-control" name="subCategory" required autocomplete="off" value="<%=data.subCategory%>" id="subCategory" placeholder="Enter Sub Category">
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="city">City</label>
+                            <input type="text" class="form-control" name="city" required autocomplete="off" id="city" value="<%=data.city%>" placeholder="Enter Seller Name">
+                        </div>
+                    </div>
+                     <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="purchasedOn">Date Of Purchase</label>
+                            <input type="text" class="form-control" name="purchasedOn" required autocomplete="off" id="purchasedOn" value="<%=data.purchasedOn%>" placeholder="Enter Seller Name">
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="form-group">
+                            <textarea class="form-control textarea" rows="5" name="description" required id="text" placeholder="Please enter the blog content in this section"><%=data.description%></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <button type="submit" class="btn main-btn pull-right btn-success">Save</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</header>
+</body>
+</html>
+
+
