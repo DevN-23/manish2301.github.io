@@ -185,6 +185,18 @@ app.get('/viewads/:id', function(req, res){
     });
 } )
 
+app.get('/blog/:id', function(req, res){
+    Blog.findById( req.params.id, function ( err, blog ) {
+        if(!err && blog){
+            res.render('adDetail.ejs',{
+                data : blog
+            })
+        } else {
+            console.log(err)
+        }
+    });
+} )
+
 app.get('/editAd/:id', function(req, res){
     Blog.findById( req.params.id, function ( err, blog ) {
         if(!err && blog){
